@@ -35,5 +35,5 @@
         ![](./01-Images/02-CronJobSyntax.png)
       - Complete list of events that can be used to trigger workflows are available (here)[https://docs.github.com/en/free-pro-team@latest/actions/reference/events-that-trigger-workflows].
     - **Workflows:**
-      - Workflows are made up of one or more jobs and can be scheduled or triggered by an event
-    - 
+      - Workflows are made up of one or more jobs and can be scheduled or triggered by an event.
+      - Jobs can be configured to run sequentially or in parallel.

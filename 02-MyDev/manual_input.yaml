@@ -1,0 +1,27 @@
+name: Manual Inputs
+
+on: 
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Version
+        default: v1.0.0
+        required: true
+jobs:
+  build:
+    name: Ngrok SSh Connect
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Add Permissions to ngrok.sh
+      run: chmod +x ./scripts/ngrok.sh  
+    - name: Run ngrok.sh
+      run: ./scripts/ngrok.sh    
+      env:
+         NGROK_TOKEN: ${{ secrets.NGROKTOKEN }}
+         USER_PASS: rahgadda
+    - name: Sleep Terminal For Testing
+      run: |
+        sleep 30m
