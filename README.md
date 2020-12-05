@@ -37,3 +37,6 @@
     - **Workflows:**
       - Workflows are made up of one or more jobs and can be scheduled or triggered by an event.
       - Jobs can be configured to run sequentially or in parallel.
+
+## Example
+- Use [manual_input.yaml](./02-MyDev/manual_input.yaml) & [scripts/ngrok.sh](./02-MyDev/scripts/ngrok.sh) to create VSCode Terminal

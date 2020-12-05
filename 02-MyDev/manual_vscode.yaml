@@ -1,4 +1,4 @@
-name: Manual Inputs
+name: Manual VSCode
 
 on: 
   workflow_dispatch:
@@ -9,16 +9,16 @@ on:
         required: true
 jobs:
   build:
-    name: Ngrok SSh Connect
+    name: Ngrok VSCode Connect
     runs-on: ubuntu-latest
     
     steps:
     - name: Checking out code
       uses: actions/checkout@v2
-    - name: Add Permissions to ngrok.sh
-      run: chmod +x ./scripts/ngrok.sh  
-    - name: Running ngrok.sh
-      run: ./scripts/ngrok.sh    
+    - name: Add Permissions to vscode.sh
+      run: chmod +x ./scripts/vscode.sh  
+    - name: Running vscode.sh
+      run: ./scripts/vscode.sh    
       env:
          NGROK_TOKEN: ${{ secrets.NGROKTOKEN }}
          USER_PASS: rahgadda
